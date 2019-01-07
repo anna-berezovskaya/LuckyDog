@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LuckyDog</string>
+    <string name="location.hint">Your location</string>
 </resources>

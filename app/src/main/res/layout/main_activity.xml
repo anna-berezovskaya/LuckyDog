@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</LinearLayout>
+    <AutoCompleteTextView
+        android:id="@+id/location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/location.hint"
+        android:imeOptions="actionSearch"
+        android:inputType="textCapSentences"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_marginEnd="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/startDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <AutoCompleteTextView
+        android:id="@+id/duration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/maxPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>
