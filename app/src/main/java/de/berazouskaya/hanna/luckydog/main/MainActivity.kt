@@ -3,6 +3,7 @@ package de.berazouskaya.hanna.luckydog.main
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
 import de.berazouskaya.hanna.luckydog.R
 import de.berazouskaya.hanna.luckydog.main.base.BaseActivity
 import kotlinx.android.synthetic.main.main_activity.*
@@ -44,5 +45,8 @@ class MainActivity : BaseActivity() {
                 datePickerDialog.show()
             }
         }
+
+        duration.setAdapter(ArrayAdapter<Int>(this, android.R.layout.simple_list_item_1, android.R.id.text1, (1..15).toMutableList()))
+        duration.setOnClickListener { duration.showDropDown() }
     }
 }
