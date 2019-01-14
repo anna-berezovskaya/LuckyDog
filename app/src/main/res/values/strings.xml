@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">LuckyDog</string>
     <string name="location.hint">Your location</string>
+    <string name="duration.hint">Duration of your trip</string>
+    <string name="max.price.hint">Max price</string>
+    <string name="start.date.hint">Start date</string>
 </resources>

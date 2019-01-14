@@ -1,37 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:fillViewport="true">
 
-    <AutoCompleteTextView
-        android:id="@+id/location"
-        android:layout_width="0dp"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/location.hint"
-        android:imeOptions="actionSearch"
-        android:inputType="textCapSentences"
-        android:layout_marginStart="@dimen/padding_small"
-        android:layout_marginEnd="@dimen/padding_small"
-        android:layout_marginTop="@dimen/padding_normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:paddingStart="@dimen/padding_normal"
+        android:paddingEnd="@dimen/padding_normal">
 
-    <EditText
-        android:id="@+id/startDate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content" />
+        <AutoCompleteTextView
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal"
+            android:hint="@string/location.hint"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <AutoCompleteTextView
-        android:id="@+id/duration"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/startDate"
+            android:nextFocusDown="@id/duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:hint="@string/start.date.hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location" />
 
-    <EditText
-        android:id="@+id/maxPrice"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content" />
+        <AutoCompleteTextView
+            android:id="@+id/duration"
+            android:nextFocusDown="@id/maxPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal"
+            android:hint="@string/duration.hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startDate" />
 
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:id="@+id/maxPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal"
+            android:hint="@string/max.price.hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/duration" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
